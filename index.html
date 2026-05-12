@@ -5,67 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Shop</title>
     <link rel="stylesheet" href="styles.css">
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#products">PRODUCTS</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#coffee-pairings">COFFEE-PAIRINGS</a></li>               
-                <li><a href="#faq">FAQS</a></li>
-                <li><a href="#contact">CONTACT US</a></li>
-                <li><a href="#contact" class="get-in-touch">Get in Touch</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="home" id="home">
-        <div class="content">
-            <h1>Indulge in the Rich Aroma of Our Specialty Coffee</h1>
-            <p>Step into a world of exquisite flavors and handcrafted coffee blends, brewed to perfection for every coffee lover.</p>
-            <button id="shopNowBtn">Shop Now</button>
+<header class="header">
+  <div class="container nav-container">
+
+    <div class="logo">Café Lune</div>
+
+    <nav class="nav">
+      <ul id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#coffee-pairings">Pairings</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="btn-nav">Get in Touch</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">☰</div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div class="hero-text">
+      <h1>Crafted Coffee for Quiet Moments</h1>
+      <p>
+        A refined selection of specialty coffee, roasted with precision and designed for those who appreciate detail.
+      </p>
+
+      <div class="hero-buttons">
+<button class="btn-primary" id="shopBtn">Shop Collection</button>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="coffee2-removebg-preview.png" alt="Coffee"/>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="products" id="products">
+  <h2 class="section-title">Our Signature Selection</h2>
+  <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <div class="product-container">
+
+    <div class="product-card" data-index="0">
+      <img src="premium.png" class="product-img">
+
+      <div class="product-info">
+        <h3>Premium Coffee Beans</h3>
+        <p>High-altitude sourced beans with rich aroma and balance.</p>
+
+        <div class="bottom-row">
+          <span class="price">$20.99</span>
+          <button class="buy-btn">Buy Now</button>
         </div>
-        <div class="coffee-image">
-            <img src="coffee2-removebg-preview.png" alt="Delicious Coffee">
+      </div>
+    </div>
+
+    <div class="product-card" data-index="1">
+      <img src="freshly.jpg" class="product-img">
+
+      <div class="product-info">
+        <h3>Freshly Brewed Coffee</h3>
+        <p>Smooth, freshly brewed coffee for daily calm moments.</p>
+
+        <div class="bottom-row">
+          <span class="price">$15.99</span>
+          <button class="buy-btn">Buy Now</button>
         </div>
-        
-    </section>
-    <section class="products" id="products">
-        <div class="line-container">
-            <span class="line" id="line-1"></span>
-            <span class="line" id="line-2"></span>
-            <span class="line" id="line-3"></span>
+      </div>
+    </div>
+
+    <div class="product-card" data-index="2">
+      <img src="exclusive.png" class="product-img">
+
+      <div class="product-info">
+        <h3>Exclusive Coffee Mug</h3>
+        <p>Minimal handcrafted mug for a luxury coffee ritual.</p>
+
+        <div class="bottom-row">
+          <span class="price">$19.99</span>
+          <button class="buy-btn">Buy Now</button>
         </div>
-                <div class="product-container">
-            <div class="product-card" data-index="0">
-                <img src="premium.png" alt="Coffee Product 1" class="product-img">
-                <div class="product-info">
-                    <h3>Premium Coffee Beans</h3>
-                    <p>High-quality coffee beans sourced from the best farms, delivering an flavorful brew.</p>
-                    <span class="price">$20.99</span>
-                    <button class="buy-btn">Buy Now</button>
-                </div>
-            </div>
-            <div class="product-card"  data-index="1">
-                <img src="freshly.jpg" alt="Coffee Product 2" class="product-img">
-                <div class="product-info">
-                    <h3>Freshly Brewed Coffee</h3>
-                    <p>Enjoy the smooth, balanced flavor of freshly brewed coffee.</p>
-                    <span class="price">$15.99</span>
-                    <button class="buy-btn">Buy Now</button>
-                </div>
-            </div>
-            <div class="product-card" data-index="2">
-                <img src="exclusive.png" alt="Coffee Product 3" class="product-img">
-                <div class="product-info">
-                    <h3>Exclusive Coffee Mug</h3>
-                    <p>Enjoy your coffee in style with our exclusive, handcrafted coffee mugs.</p>
-                    <span class="price">$19.99</span>
-                    <button class="buy-btn">Buy Now</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
     <section class="about" id="about">
         <div class="about-container">
@@ -82,165 +118,388 @@
                 </p>
             </div>
         </div>
-    </section>
     
-    
-    <section class="coffee-pairings" id="coffee-pairings">
-        <div class="pairing-container">
-            <div class="pairing-card">
-                <img src="coffee-milk.png" alt="Exclusive Coffee Mug with Milk" class="pairing-img">
-                <div class="pairing-info">
-                    <h3>Exclusive Coffee Mug & Warm Milk</h3>
-                    <p>Enjoy the smooth richness of warm milk in our exclusive handcrafted coffee mug.</p>
-                </div>
-            </div>
-            <div class="pairing-card">
-                <img src="chocolate-coffee.jpg" alt="Premium Coffee Beans with Chocolate" class="pairing-img">
-                <div class="pairing-info">
-                    <h3>Premium Coffee & Dark Chocolate</h3>
-                    <p>The bold aroma of premium coffee pairs perfectly with rich dark chocolate.</p>
-                </div>
-            </div>
-            <div class="pairing-card">
-                <img src="coffee-croissant.jfif" alt="Freshly Brewed Coffee with Croissant" class="pairing-img">
-                <div class="pairing-info">
-                    <h3>Freshly Brewed Coffee & Croissant</h3>
-                    <p>A French-inspired pairing that balances the smooth taste of coffee with a flaky croissant.</p>
-                </div>
-            </div>
-            <div class="pairing-card">
-                <img src="biscotti.jpg" alt="Exclusive Coffee Mug with Biscotti" class="pairing-img">
-                <div class="pairing-info">
-                    <h3>Exclusive Coffee Mug & Biscotti</h3>
-                    <p>Dip a crunchy biscotti into your coffee for an authentic Italian experience.</p>
-                </div>
-            </div>
-            <div class="pairing-card">
-                <img src="cheesecake.jfif" alt="Premium Coffee with Cheesecake" class="pairing-img">
-                <div class="pairing-info">
-                    <h3>Premium Coffee & Cheesecake</h3>
-                    <p>The creamy sweetness of cheesecake enhances the deep flavors of premium coffee.</p>
-                </div>
-            </div>
-            <div class="pairing-card">
-                <img src="donuts.jpg" alt="Freshly Brewed Coffee with Donut" class="pairing-img">
-                <div class="pairing-info">
-                    <h3>Freshly Brewed Coffee & Donut</h3>
-                    <p>A classic duo that brings the ultimate comfort with every sip and bite.</p>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-    
-    <section class="faq" id="faq">
-        <div class="faq-container">
-    
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>What types of coffee do you offer?</h3>
-                    <span class="toggle-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>We offer premium coffee beans, freshly brewed coffee, and exclusive mugs crafted with the finest ingredients.</p>
-                </div>
-            </div>
-    
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How can I place an order?</h3>
-                    <span class="toggle-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Simply select a product and click the "Buy Now" button. We accept various payment methods for convenience.</p>
-                </div>
-            </div>
-    
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Do you offer international shipping?</h3>
-                    <span class="toggle-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, we offer international shipping to most countries. Please check shipping options at checkout.</p>
-                </div>
-            </div>
-    
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Can I return a product?</h3>
-                    <span class="toggle-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, we accept returns within 30 days. Please refer to our return policy for details.</p>
-                </div>
-            </div>
-        </div>
     </section>
 
-    <section class="contact" id="contact">
-        <div class="contact-container">
-            <div class="contact-form">
-                <h2>Contact Us</h2>
-                <form action="#" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+      <section class="story" id="story">
+  <div class="container">
+    <h2 class="section-title">THE COFFEE JOURNEY</h2>
+    <div class="story-timeline">
+      <div class="story-step">
+        <span class="step-number">01</span>
+        <div class="step-content">
+          <h3>Born in the Soil</h3>
+          <p>Every bean starts its life in high-altitude farms where climate, soil, and care shape its identity long before it becomes coffee.</p>
+        </div>
+      </div>
+
+      <div class="story-step">
+        <span class="step-number">02</span>
+        <div class="step-content">
+          <h3>Harvested by Hand</h3>
+          <p>Only the ripest cherries are handpicked with precision — no machines, just human experience and patience.</p>
+        </div>
+      </div>
+
+      <div class="story-step">
+        <span class="step-number">03</span>
+        <div class="step-content">
+          <h3>Roasted with Precision</h3>
+          <p>We roast in micro-batches to unlock deep aroma layers, balancing boldness, acidity, and natural sweetness.</p>
+        </div>
+      </div>
+
+      <div class="story-step">
+        <span class="step-number">04</span>
+        <div class="step-content">
+          <h3>Served as an Experience</h3>
+          <p>What you drink is not just coffee — it’s a crafted moment designed to slow time and elevate your senses.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+<div class="modal" id="buyModal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModal">&times;</span>
+
+    <h2>Secure Checkout</h2>
+
+    <div class="product-summary">
+      <p id="modalProductName"></p>
+      <p id="modalProductPrice"></p>
+    </div>
+
+    <label>Payment Method</label>
+    <select id="paymentMethod">
+      <option value="card">Credit / Debit Card</option>
+      <option value="paypal">PayPal</option>
+      <option value="cash">Cash on Delivery</option>
+    </select>
+
+    <div id="cardFields" class="card-fields">
+      <input type="text" placeholder="Card Holder Name">
+      <input type="text" placeholder="Card Number">
+      <div class="row">
+        <input type="text" placeholder="MM/YY">
+        <input type="text" placeholder="CVV">
+      </div>
+    </div>
+    <input type="text" placeholder="Full Name">
+    <input type="text" placeholder="Address">
+    <input type="text" placeholder="City">
+
+    <button class="order-btn">Pay Now</button>
+
+  </div>
+</div>
+
     
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-    
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-    
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+   <section class="coffee-pairings" id="coffee-pairings">
+     <h2 class="section-title">Coffee Pairings</h2>
+  <div class="pairing-container">
+    <div class="pairing-card">
+      <img src="coffee-milk.png" class="pairing-img">
+      <div class="pairing-info">
+        <span class="tag">Soft Blend</span>
+        <h3>Coffee & Warm Milk</h3>
+
+        <p class="desc">
+          A gentle, comforting pairing designed for slow mornings and calm moments.
+        </p>
+
+        <div class="details">
+          <p><strong>Taste:</strong> Creamy • Mild • Balanced</p>
+          <p><strong>Best time:</strong> Morning ritual</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pairing-card">
+      <img src="chocolate-coffee.jpg" class="pairing-img">
+      <div class="pairing-info">
+        <span class="tag">Bold Contrast</span>
+        <h3>Dark Chocolate</h3>
+
+        <p class="desc">
+          Intense cocoa richness that deepens espresso flavor complexity.
+        </p>
+
+        <div class="details">
+          <p><strong>Taste:</strong> Bitter • Rich • Deep</p>
+          <p><strong>Best time:</strong> After lunch</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pairing-card">
+      <img src="coffee-croissant.jfif" class="pairing-img">
+      <div class="pairing-info">
+        <span class="tag">French Style</span>
+        <h3>Croissant</h3>
+
+        <p class="desc">
+          Buttery layers that melt perfectly into smooth coffee aroma.
+        </p>
+        <div class="details">
+          <p><strong>Taste:</strong> Buttery • Soft • Warm</p>
+          <p><strong>Best time:</strong> Breakfast</p>
+        </div>
+      </div>
+    </div>
+    <div class="pairing-card">
+      <img src="biscotti.jpg" class="pairing-img">
+      <div class="pairing-info">
+        <span class="tag">Italian Classic</span>
+        <h3>Biscotti</h3>
+        <p class="desc">
+          Crunchy texture made for dipping into hot espresso.
+        </p>
+        <div class="details">
+          <p><strong>Taste:</strong> Crunchy • Sweet • Dry</p>
+          <p><strong>Best time:</strong> Afternoon coffee</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pairing-card">
+      <img src="cheesecake.jfif" class="pairing-img">
+
+      <div class="pairing-info">
+        <span class="tag">Dessert Pair</span>
+        <h3>Cheesecake</h3>
+        <p class="desc">
+          Creamy sweetness that balances bold coffee bitterness.
+        </p>
+        <div class="details">
+          <p><strong>Taste:</strong> Sweet • Creamy • Soft</p>
+          <p><strong>Best time:</strong> Dessert moment</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pairing-card">
+      <img src="donuts.jpg" class="pairing-img">
+      <div class="pairing-info">
+        <span class="tag">Comfort Classic</span>
+        <h3>Donuts</h3>
+        <p class="desc">
+          The perfect everyday treat for a cozy coffee break.
+        </p>
+        <div class="details">
+          <p><strong>Taste:</strong> Sweet • Soft • Rich</p>
+          <p><strong>Best time:</strong> Anytime break</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="faq" id="faq">
+  <h2 class="faq-title">Frequently Asked Questions </h2>
+    <div class="faq-container">
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>What types of coffee do you offer?</h3>
+                <span class="toggle-icon">+</span>
             </div>
-            <div class="contact-info">
-                <h3>Visit Us</h3>
-                <p>123 Coffee St, Brew City</p>
-                <h3>Call Us</h3>
-                <p>(123) 456-7890</p>
-                <h3>Email Us</h3>
-                <p>info@coffeeshop.com</p>
+            <div class="faq-answer">
+                <p>We offer premium coffee beans, freshly brewed coffee, and exclusive handcrafted coffee experiences made with high-quality ingredients.</p>
             </div>
         </div>
-    </section>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>How can I place an order?</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Click on “Buy Now”, choose your product, fill in details and complete your order through our secure checkout system.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Do you offer international shipping?</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, we ship worldwide with fast and secure delivery depending on your location.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Can I return a product?</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, returns are accepted within 30 days as long as the product is unused and in original packaging.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="subscription" id="subscription">
+  <div class="subscription-container">
+    <div class="sub-text">
+      <h2>COFFEE SUBSCRIPTION</h2>
+      <p>
+        Get freshly roasted coffee delivered to your door every month. 
+        Choose your intensity, flavor, and grind style — we handle the rest.
+      </p>
+
+      <ul>
+        <li>✔ Fresh monthly delivery</li>
+        <li>✔ Exclusive seasonal blends</li>
+        <li>✔ Cancel anytime</li>
+      </ul>
+
+      <button class="sub-btn">Start Subscription</button>
+    </div>
+
+    <div class="sub-cards">
+
+      <div class="sub-card" data-plan="light">
+        <h3>Light Roast</h3>
+        <p>Soft, fruity & smooth flavor profile.</p>
+        <span>$18 / month</span>
+      </div>
+
+      <div class="sub-card featured" data-plan="signature">
+        <h3>Signature Blend</h3>
+        <p>Balanced taste with rich aroma.</p>
+        <span>$25 / month</span>
+      </div>
+
+      <div class="sub-card" data-plan="dark">
+        <h3>Dark Roast</h3>
+        <p>Bold, strong and intense experience.</p>
+        <span>$22 / month</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="subModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Checkout</h2>
+      <span class="close-btn" id="closeSubModal">&times;</span>
+    </div>
+
+    <div id="step1">
+      <div class="product-summary">
+        <p id="selectedPlanName"></p>
+        <span id="selectedPlanPrice"></span>
+      </div>
+
+      <label>Payment Method</label>
+      <select id="subPaymentMethod">
+        <option value="card">Credit / Debit Card</option>
+        <option value="paypal">PayPal</option>
+        <option value="bank">Bank Transfer</option>
+      </select>
+
+      <input type="email" placeholder="Email for receipt">
+
+      <button class="order-btn" id="nextStep">
+        Continue to Payment
+      </button>
+    </div>
+
+    <div id="step2" style="display:none;">
+      <h3 style="font-weight:300; margin-bottom:10px;">Card Details</h3>
+      <input type="text" placeholder="Cardholder Name">
+      <input type="text" placeholder="Card Number">
+      <div class="row">
+        <input type="text" placeholder="MM/YY">
+        <input type="text" placeholder="CVV">
+      </div>
+      <button class="order-btn">
+        Subscribe & Pay
+      </button>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+<section class="contact" id="contact">
+    <div class="contact-container">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <h3>Visit Us</h3>
+            <p>123 Coffee St, Brew City</p>
+            <h3>Call Us</h3>
+            <p>(123) 456-7890</p>
+            <h3>Email</h3>
+            <p>info@coffeeshop.com</p>
+        </div>
+    </div>
+</section>
+
     
-   
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-left">
-                <h3>Coffee Shop</h3>
-                <p>123 Coffee St, Brew City</p>
-                <p>Email: info@coffeeshop.com</p>
-                <p>Phone: (123) 456-7890</p>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#faq">FAQs</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#"><img src="facebook.jpg" alt="Facebook"></a>
-                    <a href="#"><img src="twitter.png" alt="Twitter"></a>
-                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Coffee Shop. All rights reserved.</p>
-        </div>
-    </footer>
+  <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Café Lune</h3>
+      <p>123 Coffee St, Brew City</p>
+      <p>Email: info@coffeeshop.com</p>
+      <p>Phone: (123) 456-7890</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="facebook.jpg" alt="Facebook"></a>
+        <a href="#"><img src="twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Coffee Shop. All rights reserved.</p>
+  </div>
+</footer>
     
 
     <script src="script.js"></script>
 
 </body>
 </html>
+
